@@ -18,7 +18,7 @@ def getIndexRangeInput(message):
             print("Second index out of range. Try again.")
             continue
         elif int(indexRangeStrArr[0]) > int(indexRangeStrArr[1]):
-            print("Second index must be greater than the first index. Try again.")
+            print("Second index must be greater than or equal to the first index. Try again.")
             continue
         else:
             indexRangeArr.append(int(indexRangeStrArr[0]))
