@@ -110,8 +110,18 @@ def main():
     for k, v in messages.items():
         length = len(v)
         print(f"{k}: {v} [{length}]")
+    
+    chosenMessage = messages[1]
 
-    chosenMessage = messages[int(input("Encrypted message to guess from: "))]
+    while True:
+        chosenMessageNum = int(input("Encrypted message to guess from: "))
+
+        if chosenMessageNum in messages:
+            chosenMessage = messages[chosenMessageNum]
+            break
+        else:
+            print(f"Invalid option {chosenMessageNum}. Try again")
+
     indexRangeArr = getIndexRangeInput(chosenMessage)
     validCribLength = (indexRangeArr[1] - indexRangeArr[0]) + 1
     crib = getCribInput(validCribLength)
