@@ -147,7 +147,7 @@ def main():
 
         if bound1 + 1 > len(v):
             print(f"Guessed {k}: {v.lower()}")
-            break
+            continue
         elif bound2 + 1 > len(v):
             bound2 = len(v) - 1
             till = (bound2 - bound1) + 1
